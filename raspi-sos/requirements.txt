@@ -1,0 +1,5 @@
+gpiozero>=1.6
+requests>=2.32
+python-dotenv>=1.0
+simpleaudio>=1.0
+livekit-agents>=0.6
