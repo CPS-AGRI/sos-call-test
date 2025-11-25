@@ -136,7 +136,7 @@ export default function Admin() {
     const { roomName: responseRoomName } = await response.json();
     const roomName = responseRoomName || getRoomName(sos);
     const win = window.open(
-      `/call/${sos.id}?room=${roomName || getRoomName(sos)}&role=admin`,
+      `/sos/call/${sos.id}?room=${roomName || getRoomName(sos)}&role=admin`,
       "_blank"
     );
     if (win) win.focus();

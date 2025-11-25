@@ -40,7 +40,7 @@ export default function SosButton({
         alert(`ข้อผิดพลาด: ${data.error || response.status}`);
         return;
       }
-      window.location.href = `/call/${data.sosId}?room=${data.roomName}&role=station`;
+      window.location.href = `/sos/call/${data.sosId}?room=${data.roomName}&role=station`;
     } catch (err) {
       console.error(err);
       alert("ไม่สามารถเชื่อมต่อได้");
