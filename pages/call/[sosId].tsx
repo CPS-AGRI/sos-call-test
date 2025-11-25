@@ -35,7 +35,7 @@ export default function Call() {
     const fetchToken = async () => {
       try {
         const response = await fetch(
-          `/api/livekit/token?room=${room}&identity=${identity}&isAdmin=${
+          `/api/sos/livekit/token?room=${room}&identity=${identity}&isAdmin=${
             role === "admin"
           }`
         );
@@ -124,7 +124,7 @@ export default function Call() {
     setHangupMessage("กำลังวางสาย...");
     setEndingCall(true);
     try {
-      await fetch("/api/sos/hangup", {
+      await fetch("/api/sos/sos/hangup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ sosId }),

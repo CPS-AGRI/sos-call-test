@@ -25,7 +25,7 @@ export default function SosButton({
         setLoading(false);
         return;
       }
-      const response = await fetch("/api/sos", {
+      const response = await fetch("/api/sos/sos", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

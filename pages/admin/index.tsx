@@ -30,7 +30,7 @@ export default function Admin() {
   const fetchSosList = useCallback(async () => {
     try {
       setLoading(true);
-      const res = await fetch("/api/sos/list");
+      const res = await fetch("/api/sos/sos/list");
       if (!res.ok) {
         throw new Error(`โหลดรายการ SOS ไม่สำเร็จ (${res.status})`);
       }
@@ -121,7 +121,7 @@ export default function Admin() {
   }, []);
 
   const accept = async (sos: any) => {
-    const response = await fetch("/api/sos/accept", {
+    const response = await fetch("/api/sos/sos/accept", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ sosId: sos.id, adminName: "Admin A" }),
