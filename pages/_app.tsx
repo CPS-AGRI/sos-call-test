@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 export default function App({ Component, pageProps }: any) {
   useEffect(() => {
-    fetch("/api/sos/socket");
+    fetch("/sos/api/socket");
   }, []);
 
   return <Component {...pageProps} />;
